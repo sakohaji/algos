@@ -1,0 +1,27 @@
+#brute-force  
+from datetime import datetime #initializes the function to test for runtime  
+start = datetime.now()  
+end = datetime.now()  
+  
+def fibanocci(j):  
+start = datetime.now()  
+	   
+	a = 0  
+	b = 1  
+	if (j) <= 1:  
+		if j < 0:  
+			return None  
+		if j == 0:  
+			return a  
+		if  j == 1:   
+			return b  
+	else:  
+		return  fibanocci(j-1) + fibanocci(j-2)  
+	end = datetime.now()  
+  
+print (end- start) #gave run time from start to end  
+  
+###test cases  
+##print (fibanocci(1))  
+##print (fibanocci(3))  
+##print (fibanocci(90))  
