@@ -1,0 +1,18 @@
+
+#Tabulaion(bottom-up)  
+  
+from datetime import datetime  
+start = datetime.now()  
+end = datetime.now()  
+  
+def fibanocci(j):  
+	start = datetime.now()  
+  if j in cache:  
+		return (cache[j])  
+	for i in range(2, j+1):  
+		cache[j] = fibanocci(j-1) + fibanocci(j-2)  
+		return (cache[j])  
+	end = datetime.now()  
+  
+print(end-start)  
+print (cache)  
