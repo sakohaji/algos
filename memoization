@@ -1,0 +1,31 @@
+#Memoization(top-down)  
+from datetime import datetime  
+start = datetime.now()  
+end = datetime.now()  
+  
+cache = {0:1,  
+		 1:1,  
+		 2:1}  
+  
+def fibanocci(j):  
+   start = datetime.now()  
+	if j in cache:  
+		return cache[j]  
+	a = 0  
+	b = 1  
+	if (j) <= 1:  
+		if j < 0:  
+			return None  
+		if j == 0:  
+			cache[0] = a  
+			return (cache[0])  
+		if  j == 1:  
+			cache[1] = b  
+			return (cache[1])  
+	else:  
+		cache[j] = fibanocci(j-1) + fibanocci(j-2)  
+		return (cache[j])  
+end = datetime.now()  
+  
+print (end- start)   
+print (cache) #Prints the cache of saved solutions  
